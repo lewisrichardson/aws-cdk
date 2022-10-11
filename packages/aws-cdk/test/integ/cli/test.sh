@@ -1,12 +1,9 @@
 #!/bin/bash
-set -euo pipefail
-scriptdir=$(cd $(dirname $0) && pwd)
+set -eu
+# This is a backwards compatibility script. All logic has moved to '@aws-cdk-testing/cli-integ'
+# and should be called from there directly.
 
-echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-echo 'CLI Integration Tests'
-echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
-cd $scriptdir
+[[ $VIA_NEW_RUNNER == 1 ]]
 
-source ../common/jest-test.bash
-invokeJest "$@"
+exec node_modules/.bin/run-suite --use-version=$VERSION cli-integ-tests

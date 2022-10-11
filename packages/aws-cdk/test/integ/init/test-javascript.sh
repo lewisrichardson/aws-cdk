@@ -1,27 +1,8 @@
 #!/bin/bash
-#------------------------------------------------------------------
-# setup
-#------------------------------------------------------------------
-set -e
-scriptdir=$(cd $(dirname $0) && pwd)
-source ${scriptdir}/common.bash
+set -eu
+# This is a backwards compatibility script. All logic has moved to '@aws-cdk-testing/cli-integ'
+# and should be called from there directly.
 
-header Javascript
+[[ $VIA_NEW_RUNNER == 1 ]]
 
-#------------------------------------------------------------------
-
-if [[ "${1:-}" == "" ]]; then
-    templates="app sample-app"
-else
-    templates="$@"
-fi
-
-for template in $templates; do
-    echo "Trying Javascript template $template"
-
-    setup
-
-    cdk init -l javascript $template
-    npm run test
-    cdk synth
-done
+exec node_modules/.bin/run-suite --use-version=$VERSION init-javascript
