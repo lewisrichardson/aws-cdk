@@ -7,6 +7,7 @@ import * as kms from '@aws-cdk/aws-kms';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as ssm from '@aws-cdk/aws-ssm';
 import { Annotations, CfnOutput, CfnResource, IResource, Resource, Stack, Tags, Token, Duration, Size } from '@aws-cdk/core';
+import { ILambdaLayerAsset } from '@aws-cdk/interfaces';
 import { Construct, Node } from 'constructs';
 import * as YAML from 'yaml';
 import { AlbController, AlbControllerOptions } from './alb-controller';
@@ -129,6 +130,11 @@ export interface ICluster extends IResource, ec2.IConnectable {
    * If not defined, a default layer will be used.
    */
   readonly kubectlLayer?: lambda.ILayerVersion;
+
+  /**
+   * An asset for the lambda layer
+   */
+  readonly kubectlLayerAsset?: ILambdaLayerAsset;
 
   /**
    * Kubectl Provider for issuing kubectl commands against it
@@ -522,6 +528,11 @@ export interface ClusterOptions extends CommonClusterOptions {
    * @see https://github.com/aws-samples/aws-lambda-layer-kubectl
    */
   readonly kubectlLayer?: lambda.ILayerVersion;
+
+  /**
+   * Use a custom lambda layer asset
+   */
+  readonly kubectlLayerAsset?: ILambdaLayerAsset;
 
   /**
    * Amount of memory to allocate to the provider's lambda function.
