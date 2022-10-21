@@ -12,9 +12,6 @@
     "ClientIDList": [
      "sts.amazonaws.com"
     ],
-    "ThumbprintList": [
-     "9e99a48a9960b14926bb7f3b02e22da2b0ab7280"
-    ],
     "Url": {
      "Fn::Join": [
       "",
@@ -81,7 +78,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "78989d876411e582ce92577de10ee129b12c1f09d8b77f9f45ce2b97cb53bad7.zip"
+     "S3Key": "8e3c0570c7dc928a3ef2f5ce9de172f7359ae598449dbb18dc9cdeedccf00593.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,

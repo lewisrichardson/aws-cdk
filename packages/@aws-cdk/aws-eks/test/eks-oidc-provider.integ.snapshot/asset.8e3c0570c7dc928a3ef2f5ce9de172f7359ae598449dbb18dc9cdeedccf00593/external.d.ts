@@ -3,7 +3,7 @@ declare function defaultLogger(fmt: string, ...args: any[]): void;
 /**
  * Downloads the CA thumbprint from the issuer URL
  */
-declare function downloadThumbprint(issuerUrl: string): Promise<string>;
+export declare function downloadThumbprint(issuerUrl: string): Promise<string>;
 export declare const external: {
     downloadThumbprint: typeof downloadThumbprint;
     log: typeof defaultLogger;
