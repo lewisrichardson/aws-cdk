@@ -23,7 +23,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/a95bdf2a7c979f2d47f3deb5f22bb7d7c64ac5d7074620faec6b7512b3d9a4db.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/10a79577417dc56b05a9c4e9c8c5cc2f70a6e6444ba0f3774d5bc0354d6bd5ea.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -653,12 +653,6 @@
             "data": "Clusterchartspotinterrupthandler79E2D768"
           }
         ],
-        "/aws-cdk-eks-cluster-test/Cluster/Nodegroupextra-ng": [
-          {
-            "type": "aws:cdk:warning",
-            "data": "\"instanceType\" is deprecated and will be removed in the next major version. please use \"instanceTypes\" instead"
-          }
-        ],
         "/aws-cdk-eks-cluster-test/Cluster/Nodegroupextra-ng/NodeGroupRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -683,12 +677,6 @@
             "data": "ClusterNodegroupextrangspotB327AE6B"
           }
         ],
-        "/aws-cdk-eks-cluster-test/Cluster/Nodegroupextra-ng-arm": [
-          {
-            "type": "aws:cdk:warning",
-            "data": "\"instanceType\" is deprecated and will be removed in the next major version. please use \"instanceTypes\" instead"
-          }
-        ],
         "/aws-cdk-eks-cluster-test/Cluster/Nodegroupextra-ng-arm/NodeGroupRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -699,12 +687,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "ClusterNodegroupextrangarm7773987A"
-          }
-        ],
-        "/aws-cdk-eks-cluster-test/Cluster/Nodegroupextra-ng-arm3": [
-          {
-            "type": "aws:cdk:warning",
-            "data": "\"instanceType\" is deprecated and will be removed in the next major version. please use \"instanceTypes\" instead"
           }
         ],
         "/aws-cdk-eks-cluster-test/Cluster/Nodegroupextra-ng-arm3/NodeGroupRole/Resource": [
